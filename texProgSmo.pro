@@ -17,21 +17,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     block.cpp \
+    collector.cpp \
     main.cpp \
     mainwindow.cpp \
     manager.cpp \
     queue.cpp \
     shop.cpp \
     statisticmanager.cpp \
+    validating.cpp \
     valve.cpp
 
 HEADERS += \
     block.h \
+    collector.h \
     mainwindow.h \
     manager.h \
     queue.h \
     shop.h \
     statisticmanager.h \
+    validating.h \
     valve.h
 
 FORMS += \

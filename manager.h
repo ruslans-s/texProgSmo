@@ -6,8 +6,8 @@
 #include "shop.h"
 #include "valve.h"
 #include "statisticmanager.h"
-
-
+#include "collector.h"
+#include "validating.h"
 class Manager
 {
 private:
@@ -15,19 +15,15 @@ private:
     int timeWorkShop; // Время работы сборщика
     int timeWorkChecks; //Время проверки и исправления
     int timeWork; // Время моделирования
-    QVector<QString> logTextVec; /*
-    Массив с логами после разработки удалить
-    */
     QVector<Queue> queueList;
     QVector<Valve> valveList;
     QVector<Shop> shopList;
+    Collector Collector;
+   StatisticManager StatisticManager;
 public:
     Manager(int newTimeToCreateBlock,int newTimeWorkShop,int newTimeWorkChecks,int newTimeWork);
     void startModeling();
-    QVector<QString> getLog(); /*
-                                 ЛОГ
-    */
-
+    QVector<QVector<int>> getInfoModelling();
 };
 
 #endif // MANAGER_H

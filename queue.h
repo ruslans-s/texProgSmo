@@ -10,8 +10,8 @@ public:
     Queue();
     int getNumberBlock();
     Block getFirstBlock();
-    void addNewBlock(Block);
-
+    void addNewBlock();
+    void deleteFirst();
 };
 
 #endif // QUEUE_H

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1284</width>
     <height>600</height>
    </rect>
   </property>
@@ -18,63 +18,72 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>331</width>
-      <height>231</height>
+      <y>220</y>
+      <width>261</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>Параметры моделирования</string>
     </property>
     <widget class="QSpinBox" name="spinBox_3">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>140</y>
-       <width>42</width>
-       <height>22</height>
+       <x>105</x>
+       <y>100</y>
+       <width>33</width>
+       <height>20</height>
       </rect>
+     </property>
+     <property name="value">
+      <number>14</number>
      </property>
     </widget>
     <widget class="QSpinBox" name="spinBox">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>60</y>
-       <width>42</width>
-       <height>22</height>
+       <x>195</x>
+       <y>48</y>
+       <width>33</width>
+       <height>20</height>
       </rect>
+     </property>
+     <property name="value">
+      <number>7</number>
      </property>
     </widget>
     <widget class="QSpinBox" name="spinBox_2">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>100</y>
-       <width>42</width>
-       <height>22</height>
+       <x>105</x>
+       <y>74</y>
+       <width>33</width>
+       <height>20</height>
       </rect>
+     </property>
+     <property name="value">
+      <number>10</number>
      </property>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>70</y>
-       <width>121</width>
+       <x>12</x>
+       <y>48</y>
+       <width>177</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Генерация</string>
+      <string>Время меду поступлениями блоков</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>110</y>
-       <width>121</width>
+       <x>12</x>
+       <y>74</y>
+       <width>87</width>
        <height>16</height>
       </rect>
      </property>
@@ -85,9 +94,9 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>140</y>
-       <width>121</width>
+       <x>12</x>
+       <y>100</y>
+       <width>81</width>
        <height>16</height>
       </rect>
      </property>
@@ -98,49 +107,271 @@
     <widget class="QSpinBox" name="spinBox_4">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>20</y>
-       <width>42</width>
-       <height>22</height>
+       <x>144</x>
+       <y>22</y>
+       <width>33</width>
+       <height>20</height>
       </rect>
+     </property>
+     <property name="maximum">
+      <number>999999</number>
+     </property>
+     <property name="value">
+      <number>24</number>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>30</y>
-       <width>47</width>
-       <height>13</height>
+       <x>12</x>
+       <y>22</y>
+       <width>114</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Время работы</string>
+      <string>Время Моделирования</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>183</x>
+       <y>22</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ч.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>234</x>
+       <y>48</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Мин.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>144</x>
+       <y>74</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Мин.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>144</x>
+       <y>100</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Мин.</string>
      </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>500</y>
-      <width>161</width>
-      <height>23</height>
+      <width>191</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Старт Моделирования</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>40</y>
-      <width>381</width>
-      <height>481</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1241</width>
+      <height>192</height>
      </rect>
     </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>50</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>160</number>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>500</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Задание</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>220</y>
+      <width>211</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Рассчетные данные</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_4"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_5"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>188</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_6"/>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -148,7 +379,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1284</width>
      <height>21</height>
     </rect>
    </property>
