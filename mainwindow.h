@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 #include "manager.h"
 #include <QMainWindow>
-
+#include "task.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -18,8 +18,10 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-private:
+    void on_pushButton_2_clicked();
 
+private:
+    Task *TaskWindow;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

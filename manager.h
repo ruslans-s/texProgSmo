@@ -19,7 +19,8 @@ private:
     QVector<Valve> valveList;
     QVector<Shop> shopList;
     Collector Collector;
-   StatisticManager StatisticManager;
+    StatisticManager StatisticManager;
+    Validating Validating;
 public:
     Manager(int newTimeToCreateBlock,int newTimeWorkShop,int newTimeWorkChecks,int newTimeWork);
     void startModeling();

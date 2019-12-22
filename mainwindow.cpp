@@ -1,12 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QStandardItem"
-
+#include "task.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+     setWindowTitle("СМО. Модель цеха по сборке микроЭВМ");
 }
 
 MainWindow::~MainWindow()
@@ -17,13 +18,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    //ui->listWidget->clear();
-    Manager Managers (ui->spinBox->text().toInt(),ui->spinBox_2->text().toInt(),ui->spinBox_3->text().toInt(),ui->spinBox_4->text().toInt()*60);
-    Managers.startModeling();
 
-    QVector<QVector<int>> infoModelling=Managers.getInfoModelling();
+    Manager Managers (ui->spinBox->text().toInt(),ui->spinBox_2->text().toInt(),ui->spinBox_3->text().toInt(),ui->spinBox_4->text().toInt()*60);//Передача в менеджер параметров моделирования
+    Managers.startModeling();// Запуск моделирования
+    QVector<QVector<int>> infoModelling=Managers.getInfoModelling();//Получение информаций о моделирований
+    //Вывод данных в таблицу
     QStandardItemModel *model = new QStandardItemModel;
-    QStandardItem *item;
     QModelIndex index;
     model = new QStandardItemModel(infoModelling.size(),6,this);
     ui->tableView->setModel(model);
@@ -33,13 +33,14 @@ void MainWindow::on_pushButton_clicked()
         model->setHeaderData(3,Qt::Horizontal,"Кол-во МикроЭВМ в очереди");
         model->setHeaderData(4,Qt::Horizontal,"Собранно МикроЭВМ");
         model->setHeaderData(5,Qt::Horizontal,"Проверенно МикроЭВМ");
-
     for(int row=0;row<model->rowCount();row++){
          for(int col=0;col<model->columnCount();col++) {
            index=model->index(row,col);
            model->setData(index, QString::number(infoModelling[row][col]));
         }
     }
+
+    //Получание рассчетных данных
     double tempInt1=0,tempInt2=0,tempInt3=0,tempInt4=0,tempInt5=0,tempInt6=ui->spinBox_4->text().toDouble(),tempInt7=0;
     for(int i=0;i<infoModelling.size()-1;i=i+60){
         tempInt1+=infoModelling[i][0];
@@ -56,4 +57,10 @@ void MainWindow::on_pushButton_clicked()
     ui->lineEdit_5->setText(QString::number((tempInt4*ui->spinBox_2->text().toDouble())/(tempInt6*60)));
     ui->lineEdit_6->setText(QString::number((tempInt7*ui->spinBox_2->text().toDouble())/(tempInt6*60)));
 
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    TaskWindow = new Task;
+    TaskWindow->show();
 }

@@ -24,6 +24,7 @@ SOURCES += \
     queue.cpp \
     shop.cpp \
     statisticmanager.cpp \
+    task.cpp \
     validating.cpp \
     valve.cpp
 
@@ -35,13 +36,18 @@ HEADERS += \
     queue.h \
     shop.h \
     statisticmanager.h \
+    task.h \
     validating.h \
     valve.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    task.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc

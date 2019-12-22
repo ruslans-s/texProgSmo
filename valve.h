@@ -5,7 +5,7 @@
 class Valve
 {
 private:
-    bool opened;
+    bool opened; //Состояние клапана
    public:
     Valve();
     bool chekopened();

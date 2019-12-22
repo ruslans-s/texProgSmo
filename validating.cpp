@@ -1,6 +1,6 @@
 #include "validating.h"
 
-Validating::Validating(int newTimeWorkOneBlock)
+void Validating::setTime(int newTimeWorkOneBlock)
 {
     timeWorkOneBlock=newTimeWorkOneBlock;
     timeWork=0;

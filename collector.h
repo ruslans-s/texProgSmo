@@ -5,7 +5,6 @@
 class Collector
 {
 private:
-    //Block Blocks;
     int timeWork; //Время обработки текушей заявки
     int timeWorkOneBlock; //Время работы с 1 заявкой
     bool busy;

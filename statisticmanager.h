@@ -7,8 +7,8 @@ class StatisticManager
 {
 private:
 
-    QVector<Block> blockModelInfo;
-    QVector<QVector<int>> infoModelling;
+    QVector<Block> blockModelInfo; //Информация о собранных и проверенных ЭВМ
+    QVector<QVector<int>> infoModelling; //Информация о моделирований
     int numberTact;
 public:
     StatisticManager();
